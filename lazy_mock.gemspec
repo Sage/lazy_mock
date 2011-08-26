@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'lazy_mock'
-  s.version     = '0.1'
+  s.version     = '1.0'
   s.summary     = 'Lazy Mocks - They respond to everything man!!'
   s.description = 'Lazy Mocks just respond to anything you throw at them.'
 
