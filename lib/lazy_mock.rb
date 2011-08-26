@@ -1,5 +1,5 @@
 class LazyMock < BasicObject
   def method_missing(*args)
-    self
+    ::LazyMock.new
   end
 end

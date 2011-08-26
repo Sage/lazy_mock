@@ -1,1 +1,28 @@
-LazyMocks
+= LazyMocks
+
+== Rationale
+
+In Rspec, using a mock object, the moer functionality you add, the more complaints you get about unexpected messages.
+
+Sometimes you just want an object that responds to anything you throw at it, and just stub specifc behavior.
+
+Enter LazyMocks.
+
+== Usage
+
+Every method returns a new instance of LazyMock.
+
+    my_mock = LazyMock.new
+    my_mock.some_method_that_doesnt_exist
+    => #<MyMock>
+
+It responds to everything.
+
+    my_mock = LazyMock.new
+    my_mock.respond_to?(:huh?)
+    => true
+
+Then you can stub what you want to.
+
+    my_mock = LazyMock.new
+    my_mock.stub(:something).and_return('foo')
