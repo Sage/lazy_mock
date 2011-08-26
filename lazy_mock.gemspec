@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'lazy_mock'
-  s.version     = '1.0'
+  s.version     = '1.0.1'
   s.summary     = 'Lazy Mocks - They respond to everything man!!'
   s.description = 'Lazy Mocks just respond to anything you throw at them.'
 
@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
 
   s.author      = 'SageOne'
   s.email       = 'sageone@sage.com'
-  s.homepage    = 'http://github.com/Sage/lazy_mocks'
+  s.homepage    = 'http://github.com/Sage/LazyMocks'
 
   s.files = Dir['{lib}/**/*'] + ['README.rdoc', 'MIT-LICENSE']
 
