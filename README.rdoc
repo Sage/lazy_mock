@@ -2,7 +2,7 @@
 
 == Rationale
 
-In Rspec, using a mock object, the moer functionality you add, the more complaints you get about unexpected messages.
+In Rspec, using a mock object, the more functionality you add, the more complaints you get about unexpected messages.
 
 Sometimes you just want an object that responds to anything you throw at it, and just stub specifc behavior.
 
