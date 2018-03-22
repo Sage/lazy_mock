@@ -1,6 +1,6 @@
-= LazyMocks
+# LazyMocks
 
-== Rationale
+## Rationale
 
 In Rspec, using a mock object, the more functionality you add, the more complaints you get about unexpected messages.
 
@@ -8,7 +8,7 @@ Sometimes you just want an object that responds to anything you throw at it, and
 
 Enter LazyMocks.
 
-== Usage
+## Usage
 
 Every method returns a new instance of LazyMock.
 
@@ -37,3 +37,10 @@ Because it returns an instance of iteself, any code paths (the first traversed) 
     end
 
 This means that for paths in your specs which you don't care about (because you're testing one specific part) won't break when you add new functionality as you flesh out your implementation.
+
+## License
+
+This gem is available as open source under the terms of the
+[MIT licence](LICENSE).
+
+Copyright (c) 2018 Sage Group Plc. All rights reserved.
