@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
 
   s.author      = 'SageOne'
   s.email       = 'sageone@sage.com'
-  s.homepage    = 'http://github.com/Sage/LazyMocks'
+  s.homepage    = 'http://github.com/Sage/lazy_mock'
 
   s.files = Dir['{lib}/**/*'] + ['README.rdoc', 'MIT-LICENSE']
 

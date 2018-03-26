@@ -1,4 +1,4 @@
-# LazyMocks
+# lazy_mock
 
 ## Rationale
 
