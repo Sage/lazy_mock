@@ -1,5 +1,7 @@
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
 Gem::Specification.new do |s|
-  s.platform    = Gem::Platform::RUBY
   s.name        = 'lazy_mock'
   s.version     = '1.0.1'
   s.summary     = 'Lazy Mocks - They respond to everything man!!'
@@ -14,5 +16,8 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{lib}/**/*'] + ['README.rdoc', 'MIT-LICENSE']
 
-  s.add_development_dependency('rspec')
+  s.add_development_dependency 'bundler', '~> 1.11'
+  s.add_development_dependency 'rake', '~> 10.0'
+  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'simplecov'
 end

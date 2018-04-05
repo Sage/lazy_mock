@@ -1,0 +1,23 @@
+language: ruby
+rvm:
+  - 2.2.8
+  - 2.3.5
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+    > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - "./cc-test-reporter before-build"
+after_script:
+  - "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
+env:
+  global:
+    secure: EH5WHsbv7QHUyTy7ihHo77tatDeMzdRzHH5+4j7VYNWAJs+5mSLkVEa4oSMmErnf1HWFs9o6/v998XfqoN8OYCYSqxt/FEr6HXnp8wSyFxmu+KUmVXMHnWPvgLiIPoyixQ6mfR/Z2UzebIKHb7bdacio2RT7yABq9UwubG6eAkI=
+deploy:
+  provider: rubygems
+  api_key:
+    secure: MGdhaRoovvZg8UIyGcMOOR1y63nFkVWhMm7ayFzsphJ0T4H7m0XIzK8e07GqxxX1Gvl9C97y7Jt1cD6SQfZPYnitBEVU1lXgtw+smsM1gFLpE5RyjS2y/tYoRKLZX8n/vZDA85hWVUTMplCn+wf1xTDKDd2ce3gFuk/Vo8RQuNA=
+  gem: lazy_mock
+  on:
+    tags: true
+    repo: Sage/lazy_mock
+    condition: "$TRAVIS_RUBY_VERSION == 2.3.5"

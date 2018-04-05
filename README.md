@@ -1,5 +1,7 @@
 # lazy_mock
 
+[![Build Status](https://travis-ci.org/Sage/lazy_mock.svg?branch=master)](https://travis-ci.org/Sage/lazy_mock)
+
 ## Rationale
 
 In Rspec, using a mock object, the more functionality you add, the more complaints you get about unexpected messages.
@@ -12,29 +14,37 @@ Enter LazyMocks.
 
 Every method returns a new instance of LazyMock.
 
-    my_mock = LazyMock.new
-    my_mock.some_method_that_doesnt_exist
-    => #<MyMock>
+```ruby
+my_mock = LazyMock.new
+my_mock.some_method_that_doesnt_exist
+=> #<MyMock>
+```
 
 It responds to everything.
 
-    my_mock = LazyMock.new
-    my_mock.respond_to?(:huh?)
-    => true
+```ruby
+my_mock = LazyMock.new
+my_mock.respond_to?(:huh?)
+=> true
+```
 
 Then you can stub what you want to.
 
-    my_mock = LazyMock.new
-    my_mock.stub(:something).and_return('foo')
+```ruby
+my_mock = LazyMock.new
+my_mock.stub(:something).and_return('foo')
+```
 
 Because it returns an instance of iteself, any code paths (the first traversed) will pass:
 
-    my_mock = LazyMock.new
-    if my_mock.thing.other_method.another_method
-      return "Test"  if my_mock.has_some_method?
-    else
-      #not getting here..
-    end
+```ruby
+my_mock = LazyMock.new
+if my_mock.thing.other_method.another_method
+  return "Test"  if my_mock.has_some_method?
+else
+  #not getting here..
+end
+```
 
 This means that for paths in your specs which you don't care about (because you're testing one specific part) won't break when you add new functionality as you flesh out your implementation.
 
