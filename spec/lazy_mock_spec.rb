@@ -15,7 +15,7 @@ describe LazyMock do
     (1..50).each do |n|
       method = SecureRandom.hex(n)
       puts "Responds To?: #{method}"
-      expect(subject.respond_to?(method)).to eq(true)
+      expect(subject).to respond_to(method)
     end
   end
 end
