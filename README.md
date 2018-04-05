@@ -1,6 +1,9 @@
 # lazy_mock
 
 [![Build Status](https://travis-ci.org/Sage/lazy_mock.svg?branch=master)](https://travis-ci.org/Sage/lazy_mock)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b2da5f67a0955fefba0f/maintainability)](https://codeclimate.com/github/Sage/lazy_mock/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/b2da5f67a0955fefba0f/test_coverage)](https://codeclimate.com/github/Sage/lazy_mock/test_coverage)
+[![Gem Version](https://badge.fury.io/rb/lazy_mock.svg)](https://badge.fury.io/rb/lazy_mock)
 
 ## Rationale
 
