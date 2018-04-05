@@ -1,4 +1,4 @@
-require File.expand_path('../../lib/lazy_mock', __FILE__)
+require 'spec_helper'
 
 describe LazyMock do
   it "responds to everything and return an instance of LazyMock" do
